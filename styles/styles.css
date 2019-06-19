@@ -71,12 +71,10 @@ header h1 {
 
 .content-dqr {
   background: url("../images/Nissan_VisualLearnMap_lob4-coursemenu.png") no-repeat;
-  background-size: contain;
-  height: auto;
+  background-size: cover;
+  height: 100%;
   margin-top: 50px;
   border: 3px solid #606060;
-  width: 100%;
-  max-width: 1024px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,7 +103,7 @@ header h1 {
   font-size: 2rem;
   font-weight: 600;
   width: 50%;
-  line-height: 21px;
+  line-height: 21pxgit;
 }
 
 .selection-dqr span {

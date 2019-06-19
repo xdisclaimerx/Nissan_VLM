@@ -65,12 +65,10 @@ header {
 .content-dqr {
   background: url("../images/Nissan_VisualLearnMap_lob4-coursemenu.png")
     no-repeat;
-  background-size: contain;
-  height: auto;
+  background-size: cover;
+  height: 100%;
   margin-top: 50px;
   border: 3px solid $secondary;
-  width: 100%;
-  max-width: 1024px;
   display: flex;
   justify-content: flex-end;
 }
@@ -91,7 +89,7 @@ header {
     font-size: 2rem;
     font-weight: 600;
     width: 50%;
-    line-height: 21px;
+    line-height: 21pxgit;
   }
   span {
     color: $primary;

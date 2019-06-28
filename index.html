@@ -1,50 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto:300,400&display=swap" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <div class="logo">
-        <img src="images/Nissan_VisualLearnMap_logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto:300,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Nissan Visual Learning Map</title>
+  </head>
+  <body id="home">
+    <div class="container">
+      <header>
+        <div class="logo" id="logo">
+          <a href="/nissanvlm/">
+            <img src="images/Nissan_VisualLearnMap_logo.png" />
+          </a>
+        </div>
+        <h1 id="title">Leadership</h1>
+      </header>
+      <div class="banner-nav-sp">
+        <ul>
+          <li class="nav1">
+            <img src="images/nav1-bg-sp.jpg" />
+            <a href="lob1.html">
+              Lob1
+            </a>
+          </li>
+          <li class="nav2">
+            <img src="images/nav2-bg-sp.jpg" />
+            <a href="dqr.html">
+              DQR
+            </a>
+          </li>
+          <li class="nav3">
+            <img src="images/nav3-bg-sp.jpg" />
+            <a href="inbound-voice.html">
+              Inbound Voice
+            </a>
+          </li>
+          <li class="nav4">
+            <img src="images/nav4-bg-sp.jpg" />
+            <a href="inbound-chat.html">
+              Inbound Chat
+            </a>
+          </li>
+          <li class="nav5">
+            <img src="images/nav5-bg-sp.jpg" />
+            <a href="lob5.html">
+              Lob5
+            </a>
+          </li>
+
+          <li class="nav6">
+            <img src="images/nav6-bg-sp.jpg" />
+            <a href="lob6.html">
+              Lob6
+            </a>
+          </li>
+        </ul>
       </div>
-      <h1>Leadership</h1>
-    </header>
-      
-      <div class="banner-nav">
+      <div class="banner-nav" id="banner-main">
         <div class="nav">
-          <span>LOB1</span>
-          <img src="images/Nissan_VisualLearnMap_lob1.png" />
+          <a href="lob1.html">
+            <span style="margin-left:0;">LOB1</span>
+            <div class="nav-hover">
+              <div class="over"></div>
+              <img src="images/Nissan_VisualLearnMap_lob1.png" />
+            </div>
+          </a>
         </div>
         <div class="nav">
-          <span>DQR<br />(Dealer Quote Requests)
-          </span>
-          <img src="images/Nissan_VisualLearnMap_lob2.png" />
+          <a href="dqr.html">
+            <span>DQR<br />(Dealer Quote Requests) </span>
+            <div class="nav-hover">
+              <img src="images/Nissan_VisualLearnMap_lob2.png" />
+            </div>
+          </a>
         </div>
         <div class="nav">
-            <span>Inbound<br /> Voice</span>
-          <img src="images/Nissan_VisualLearnMap_lob3.png" />
+          <a href="inbound-voice.html">
+            <span
+              >Inbound<br />
+              Voice</span
+            >
+            <div class="nav-hover">
+              <img src="images/Nissan_VisualLearnMap_lob3.png" />
+            </div>
+          </a>
         </div>
         <div class="nav">
-          <span>Inbound<br /> Chat
-          </span>
-          <img src="images/Nissan_VisualLearnMap_lob4.png" />
+          <a href="inbound-chat.html">
+            <span
+              >Inbound<br />
+              Chat
+            </span>
+            <div class="nav-hover">
+              <img src="images/Nissan_VisualLearnMap_lob4.png" />
+            </div>
+          </a>
         </div>
         <div class="nav">
-          <span>LOB 5</span>
-          <img src="images/Nissan_VisualLearnMap_lob5.png" />
+          <a href="lob5.html">
+            <span>LOB 5</span>
+            <div class="nav-hover">
+              <img src="images/Nissan_VisualLearnMap_lob5.png" />
+            </div>
+          </a>
         </div>
         <div class="nav">
-          <span>LOB 6</span>
-          <img src="images/Nissan_VisualLearnMap_lob6.png" />
+          <a href="lob6.html">
+            <span>LOB 6</span>
+            <div class="nav-hover">
+              <img src="images/Nissan_VisualLearnMap_lob6.png" />
+            </div>
+          </a>
         </div>
       </div>
-  </div>
-</body>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.onload = function() {
+        TweenMax.to(".banner-nav", 1.5, {
+          scaleY: 1,
+          ease: Bounce.easeOut,
+          y: 0
+        });
+      };
+
+      $(".nav-hover").mouseover(function() {
+        $(this).css("opacity", "1");
+      });
+      $(".nav-hover").mouseout(function() {
+        $(this).css("opacity", "0.3");
+      });
+    </script>
+  </body>
 </html>

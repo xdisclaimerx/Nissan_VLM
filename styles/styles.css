@@ -1,5 +1,5 @@
 body {
-  border-top: red 3px solid;
+  border-top: 2px solid #c90c41;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
@@ -7,13 +7,13 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1028px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
 }
 
 header {
   position: relative;
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,113 +32,294 @@ header h1 {
 }
 
 .banner-nav {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  color: #ccc;
-  margin-top: 14px;
+  display: none;
 }
 
-.banner-nav img {
-  width: 100%;
-}
-
-.nav:not(:first-child) {
-  margin-left: -80px;
-  /* IE 9 */
-  -webkit-transform: skewX(-15deg);
-  /* Safari prior 9.0 */
-  transform: skewX(-15deg);
-  /* Standard syntax */
-}
-
-.nav:not(:first-child) img,
-.nav:not(:first-child) span {
-  /* IE 9 */
-  -webkit-transform: skewX(15deg);
-  /* Safari prior 9.0 */
-  transform: skewX(15deg);
-  /* Standard syntax */
-}
-
-.nav span {
-  height: 50px;
-  display: block;
-  text-align: center;
-}
-
-.content-dqr {
-  background: url("../images/Nissan_VisualLearnMap_lob4-coursemenu.png") no-repeat;
+.banner-nav-sp {
   background-size: cover;
-  height: 100%;
-  margin-top: 50px;
-  border: 3px solid #606060;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.selection-dqr {
-  background-color: rgba(0, 0, 0, 0.9);
-  max-width: 550px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 66px;
-}
-
-.selection-dqr p {
-  margin-left: 20px;
-  color: #c90c41;
   display: block;
-  font-size: 2rem;
-  font-weight: 600;
-  width: 50%;
-  line-height: 21pxgit;
+  height: auto;
 }
 
-.selection-dqr span {
-  color: #ccc;
-  font-size: 1rem;
-  font-weight: 200;
+@media (min-width: 320px) {
+  h1 {
+    display: none;
+  }
+  img {
+    width: 100%;
+  }
+  ul {
+    list-style: none;
+  }
+  ul li {
+    width: 100%;
+    position: relative;
+  }
+  ul li a {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 80%;
+    padding: 11% 10px;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 1.5rem;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+  }
+  .inner-banner {
+    width: 100%;
+  }
+  .selection {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+  }
+  .selection p {
+    margin-left: 20px;
+    color: #c90c41;
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    width: 50%;
+    margin-top: 0;
+  }
+  .selection span {
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 200;
+  }
+  .selection .selection-wheel {
+    color: white;
+  }
+  .selection .selection-wheel ul {
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+  .selection .selection-wheel ul li {
+    margin-left: 30px;
+    font-size: 1rem;
+    padding: 3px 10px 3px 10px;
+    list-style: none;
+    position: relative;
+    margin: 1.144rem;
+  }
+  .selection .selection-wheel ul li span {
+    font-size: 0.75rem;
+    padding-right: 20px;
+  }
+  .selection .selection-wheel ul li:before {
+    content: "";
+    background: url(../images/Nissan_VisualLearnMap_wheelicon.png);
+    height: 59px;
+    width: 59px;
+    position: absolute;
+    left: -70px;
+  }
 }
 
-.selection-dqr .selection-wheel {
-  color: white;
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  h1 {
+    display: none;
+  }
+  .banner-nav-sp {
+    display: block;
+    height: auto;
+  }
+  .banner-nav-sp ul {
+    list-style: none;
+  }
+  .banner-nav-sp ul li {
+    width: 100%;
+    position: relative;
+  }
+  .banner-nav-sp ul li img {
+    width: 100%;
+  }
+  .banner-nav-sp ul li a {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 80%;
+    height: 100%;
+    /* float: right; */
+    padding: 50px 10px;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 1.5rem;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+  }
 }
 
-.selection-dqr .selection-wheel ul {
-  margin-left: 50px;
+@media (min-width: 576px) and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
 }
 
-.selection-dqr .selection-wheel ul li {
-  margin-left: 30px;
-  font-size: 1rem;
-  padding: 3px 0px 3px 10px;
-  list-style: none;
-  position: relative;
-  margin: 1.144rem;
+@media (min-width: 576px) and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .banner-nav-sp,
+  .inner-banner {
+    display: none;
+  }
+  .banner-nav {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-top: 30px;
+    background: #000;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  .banner-nav .nav {
+    display: block;
+    height: 100%;
+  }
+  .banner-nav .nav:not(:first-child) {
+    margin-left: -80px;
+  }
+  .banner-nav .nav a {
+    text-decoration: none;
+    color: #ccc;
+    width: 171px;
+  }
+  .banner-nav .nav img {
+    /* IE 9 */
+    -webkit-transform: skewX(13deg);
+    /* Safari prior 9.0 */
+    transform: skewX(13deg);
+    /* Standard syntax */
+    width: 100%;
+  }
+  .banner-nav .nav span {
+    height: 50px;
+    display: block;
+    text-align: center;
+    font-size: 0.95rem;
+    background: white;
+    margin-left: 80px;
+  }
+  .banner-nav .nav .nav-hover {
+    /* IE 9 */
+    -webkit-transform: skewX(-13deg);
+    /* Safari prior 9.0 */
+    transform: skewX(-13deg);
+    /* Standard syntax */
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    opacity: 0.3;
+  }
+  .banner-nav .nav .nav-hover:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: skewX(-13deg);
+            transform: skewX(-13deg);
+  }
+  .content-dqr,
+  .content-lob1,
+  .content-inbound-voice,
+  .content-inbound-chat,
+  .content-lob5,
+  .content-lob6 {
+    background-size: cover !important;
+    height: 100%;
+    margin-top: 50px;
+    border: 3px solid #606060;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .content-dqr {
+    background: url("../images/Maxima-Exterior.jpg") no-repeat;
+  }
+  .content-lob1 {
+    background: url("../images/Altima-Exterior.jpg") no-repeat;
+  }
+  .content-inbound-voice {
+    background: url("../images/Murano-Exterior.jpg") no-repeat;
+  }
+  .content-inbound-chat {
+    background: url("../images/Rogue-Exterior.jpg") no-repeat;
+  }
+  .content-lob5 {
+    background: url("../images/Sentra-Exterior.jpg") no-repeat;
+  }
+  .content-lob6 {
+    background: url("../images/Titan-Exterior.jpg") no-repeat;
+  }
+  .selection {
+    background-color: rgba(0, 0, 0, 0.9);
+    max-width: 550px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 66px;
+  }
+  .selection p {
+    margin-left: 20px;
+    color: #c90c41;
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    width: 50%;
+    line-height: 21px;
+  }
+  .selection span {
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 200;
+  }
+  .selection .selection-wheel {
+    color: white;
+  }
+  .selection .selection-wheel ul {
+    margin-left: 50px;
+  }
+  .selection .selection-wheel ul li {
+    margin-left: 30px;
+    font-size: 1rem;
+    padding: 3px 0px 3px 10px;
+    list-style: none;
+    position: relative;
+    margin: 1.144rem;
+  }
+  .selection .selection-wheel ul li span {
+    font-size: 0.75rem;
+  }
+  .selection .selection-wheel ul li:before {
+    content: "";
+    background: url(../images/Nissan_VisualLearnMap_wheelicon.png);
+    height: 59px;
+    width: 59px;
+    position: absolute;
+    left: -70px;
+  }
 }
 
-.selection-dqr .selection-wheel ul li span {
-  font-size: 0.75rem;
-}
-
-.selection-dqr .selection-wheel ul li:before {
-  content: "";
-  background: url(../images/Nissan_VisualLearnMap_wheelicon.png);
-  height: 59px;
-  width: 59px;
-  position: absolute;
-  left: -70px;
+@media (min-width: 576px) and (min-width: 1200px) {
+  .container {
+    max-width: 1028px;
+  }
+  h1 {
+    display: block;
+  }
+  .banner-nav-sp {
+    display: none;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

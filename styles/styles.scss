@@ -57,16 +57,16 @@ header {
       position: relative;
 
       a {
-        background-color: rgba(0, 0, 0, 0.9);
-        width: 80%;
-        padding: 11% 10px;
+        //   background-color: rgba(0, 0, 0, 0.9);
+        //   width: 80%;
+        //   padding: 11% 10px;
         text-decoration: none;
         color: #ccc;
-        font-size: 1.5rem;
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        right: 0;
+        //   font-size: 1.5rem;
+        //   position: absolute;
+        //   z-index: 1;
+        //   top: 0;
+        //   right: 0;
       }
     }
   }
@@ -212,7 +212,7 @@ header {
         }
 
         span {
-          height: 50px;
+          height: 60px;
           display: block;
           text-align: center;
           font-size: 0.95rem;
@@ -289,7 +289,7 @@ header {
         font-size: 2rem;
         font-weight: 600;
         width: 50%;
-        line-height: 21px;
+        line-height: 35px;
       }
       span {
         color: $primary;
@@ -311,8 +311,10 @@ header {
             position: relative;
             margin: 1.144rem;
 
-            span {
-              font-size: 0.75rem;
+            a {
+              span {
+                font-size: 0.75rem;
+              }
             }
 
             &:before {
